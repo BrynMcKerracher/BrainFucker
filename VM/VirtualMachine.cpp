@@ -88,6 +88,12 @@ namespace BrainFucker::VM {
                     *memptr = 0;
                     break;
                 }
+                case Op::SubCell: {
+                    const uint16_t offset = ReadDouble();
+                    *(memptr - offset) += *memptr;
+                    *memptr = 0;
+                    break;
+                }
                 default: return false;
             }
         }

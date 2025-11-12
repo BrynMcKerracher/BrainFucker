@@ -29,7 +29,8 @@ namespace BrainFucker::Bytecode {
             JumpIfFalse,
             JumpIfTrue,
             ZeroMem,
-            AddCell
+            AddCell,
+            SubCell
         };
 
         static std::string ToString(Type op);

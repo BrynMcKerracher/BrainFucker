@@ -21,6 +21,7 @@ namespace BrainFucker {
             JumpForward,
             JumpBackward,
             AddCell,
+            SubCell,
             EndOfFile
         };
 

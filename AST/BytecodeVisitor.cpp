@@ -37,6 +37,12 @@ namespace BrainFucker::AST {
                 WriteOp(static_cast<Op::Type>(expr->data));
                 break;
             }
+            case Token::Type::SubCell: {
+                WriteOp(Op::Type::SubCell);
+                WriteOp(static_cast<Op::Type>(expr->data >> 8));
+                WriteOp(static_cast<Op::Type>(expr->data));
+                break;
+            }
             default: return 0;
         }
         return 0;
